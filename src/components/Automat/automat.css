@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    background: url("../../assets/tlo.jpg") center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0.1;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.game-container {
+    animation: fadeIn 1s ease-out;
+}
+.game-container {
+    text-align: center;
+    background: rgba(37, 17, 106, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 400px;
+}
+.game-container img {
+    margin-bottom: 0;
+}
+.slots {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.reel {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border: 1px solid #7f8c8d;
+    border-radius: 10px;
+    background-image: url('https://assets.codepen.io/439000/slotreel.webp');
+    background-size: 80px auto;
+    background-repeat: repeat-y;
+    background-position-y: 0;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.controls button, .controls input {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.controls button:hover {
+    color: #fff;
+}
+
+.stats {
+    margin: 10px 0;
+    font-size: 14px;
+}
+.stats p{
+    font-size: 19px;
+    font-family: "Orbitron", serif;
+}
+.win {
+    color: #6a3bae;
+    font-family: "Orbitron", serif;
+    font-size: 22px;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}input[type="number"] {
+     -moz-appearance: textfield;
+     appearance: textfield;
+
+     background: transparent;
+     border: none;
+     border-bottom: 2px solid #ffffff;
+     color: #ffffff;
+     font-size: 18px;
+     padding: 5px;
+     outline: none;
+     width: 60px;
+     text-align: center;
+     transition: border-color 0.3s ease-in-out;
+ }
+input[type="number"]:focus {
+    border-bottom: 2px solid #c879f6;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.mega-win {
+    color: #af74ff;
+    font-family: "Orbitron", serif;
+    font-size: 35px;
+    font-weight: bold;
+    animation: megaBlink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes megaBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+@keyframes borderBlink {
+    0%, 100% {
+        border-color: #1e272e;
+    }
+    50% {
+        border-color: #e74c3c;
+    }
+}
+
+.flash-border {
+    animation: borderBlink 1s infinite;
+}
+.game-container button {
+    margin: 10px auto;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #684cdc;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+}
+

@@ -1,0 +1,68 @@
+
+.dashboard-container {
+    font-family: "Orbitron", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.dashboard-card {
+    background: hsl(260, 70%, 25%);
+    border-radius: 12px;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #ffffff;
+}
+
+.dashboard-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #dca1ff; /* Złoty kolor */
+}
+
+.dashboard-info {
+    font-size: 18px;
+    text-align: left;
+}
+
+.dashboard-info p {
+    margin: 8px 0;
+    padding: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.balance {
+    font-size: 20px;
+    font-weight: bold;
+    color: #dca1ff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dashboard-button {
+    font-family: "Orbitron", serif;
+    background-color: rgba(109, 52, 193, 0.7);
+    font-size: 16px;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.dashboard-button:hover {
+    color: black;
+    background: #c879f6;
+}
+
+.loading-text {
+    color: white;
+    font-size: 18px;
+}

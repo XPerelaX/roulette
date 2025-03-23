@@ -1,0 +1,45 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    container_name: backend
+    ports:
+      - "5000:5000"
+    networks:
+      - casino_network
+    depends_on:
+      - mongo
+    env_file:
+      - ./backend/.env
+    restart: always
+
+  frontend:
+    build: ./frontend-new
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - casino_network
+    restart: always
+
+  mongo:
+    image: mongo
+    container_name: mongo_db
+    restart: always
+    networks:
+      - casino_network
+    volumes:
+      - mongodb_data:/data/db
+    ports:
+      - "27017:27017"  # 🔥 Udostępnia port MongoDB na lokalnym hoście bez tego widac tylko z kontenera
+
+
+
+networks:
+  casino_network:
+    driver: bridge
+
+volumes:
+  mongodb_data:
